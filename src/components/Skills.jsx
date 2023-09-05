@@ -29,36 +29,36 @@ const Skills = () => {
 
 
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={HTML} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto' />
+              <Image src={HTML} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto' />
               <p className='my-4 '>HTML</p>
             </div>
 
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={CSS} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={CSS} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>CSS</p>
             </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={JavaScript} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={JavaScript} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>JavaScript</p>
             </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={GitHub} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={GitHub} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>GitHub</p>
             </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={Mongo} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={Mongo} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>MongoDB</p>
             </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={ReactImg} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={ReactImg} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>ReactJs</p>
             </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={Tailwind} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={Tailwind} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>Tailwind</p>
             </div>
             <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-300'>
-              <Image src={Node} height={200} width={200} alt='htmlIcon' className='w-20 mx-auto ' />
+              <Image src={Node} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto ' />
               <p className='my-4 '>Node</p>
             </div>
           </div>

@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Project: Portfolio6.0</title>
+        <title>My Portfolio</title>
       </Head>
       <Navbar />
       <Hero />
