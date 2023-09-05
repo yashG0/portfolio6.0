@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] text-gray-300 ">
+            <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] shadow-xl shadow-slate-800 text-gray-300 ">
                 <div className="">
                     <Image src={Logo} alt='logo' width={180} height={180} />
                 </div>
@@ -90,7 +90,7 @@ const Navbar = () => {
                             <Link onClick={() => window.open('https://www.gmail.com/','_blank')} className='flex justify-between items-center w-full text-gray-300'> Mail <HiOutlineMail size={30} /> </Link>
                         </li>
                         <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                            <Link onClick={() => window.open('https://www.facebook.com/','_blank')} className='flex justify-between items-center w-full text-gray-300'> Resume <BsFillPersonLinesFill size={30} /> </Link>
+                            <Link onClick={() => window.open('resume.pdf','_blank')} className='flex justify-between items-center w-full text-gray-300'> Resume <BsFillPersonLinesFill size={30} /> </Link>
                         </li>
 
 
