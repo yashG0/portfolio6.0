@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-[#0a192f] shadow-xl shadow-slate-800 text-gray-300 ">
+            <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-slate-800 shadow-md shadow-slate-800 text-gray-300 ">
                 <div className="">
                     <Image src={Logo} alt='logo' width={180} height={180} />
                 </div>
