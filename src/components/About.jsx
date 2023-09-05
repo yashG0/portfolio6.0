@@ -14,10 +14,10 @@ const About = () => {
           </div>
           <div className='max-w-[1000px] w-full grid sm:grid-cols-2 gap-8 px-4'>
             <div className='sm:text-right text-4xl font-bold '>
-              <p className=''>Hi, I'm Client, nice to meet you, please take a look around</p>
+              <p className=''>Hi, I'm Freelancer, nice to meet you, please take a look around</p>
             </div>
             <div>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam voluptatem harum earum ab sequi, natus accusantium provident praesentium repellendus molestiae nesciunt nisi atque assumenda. Perspiciatis error facilis natus suscipit harum dolore sint.</p>
+              <p>Hello, I'm Yash Gaurkar, a passionate Full Stack Developer with a strong foundation in computer science and a BCA degree. I've embarked on an exciting journey in the world of web development, where I strive to turn ideas into interactive and user-friendly web experiences.</p>
             </div>
           </div>
         </div>
