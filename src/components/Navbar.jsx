@@ -46,7 +46,7 @@ const Navbar = () => {
 
 
                 {/* HAMBURGER */}
-                <div className="md:hidden z-10" onClick={handleClick}>
+                <div className="md:hidden z-10 cursor-pointer" onClick={handleClick}>
                     {!nav ? <FaBars size={20} /> : <FaTimes size={20} />}
                 </div>
 
