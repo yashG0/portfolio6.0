@@ -13,7 +13,7 @@ const Navbar = () => {
 
     return (
         <>
-            <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-slate-800 text-gray-300 ">
+            <div className="fixed w-full h-[80px] flex justify-between items-center px-4 bg-slate-800 text-gray-300 z-10">
                 <div className="">
                     <Image src={Logo} alt='logo' width={180} height={180} />
                 </div>
@@ -46,13 +46,13 @@ const Navbar = () => {
 
 
                 {/* HAMBURGER */}
-                <div className="md:hidden z-10 cursor-pointer" onClick={handleClick}>
+                <div className="md:hidden z-30 cursor-pointer" onClick={handleClick}>
                     {!nav ? <FaBars size={20} /> : <FaTimes size={20} />}
                 </div>
 
                 {/* MOBILE MENU */}
 
-                <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'}>
+                <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center z-20'}>
                     <li className='py-6 text-4xl hover:text-[#7EE39D] duration-100'>
                         <Link onClick={handleClick} to="hero" smooth={true} duration={400}>
                             Home

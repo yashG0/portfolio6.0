@@ -16,12 +16,14 @@ export default function Home() {
       <Head>
         <title>My Portfolio</title>
       </Head>
+
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      {/* <Work /> */}
-      <Contact />
+      <div className='bg-gray-700 text-gray-300 h-fit'>
+        <Hero />
+        <About />
+        <Skills />
+        <Contact />
+      </div>
     </>
   )
 }
