@@ -42,7 +42,7 @@ const Project = () => {
     };
 
     return (
-        <div name="project" className="bg-slate-600 text-slate-300 h-screen w-full">
+        <div name="project" className="bg-slate-700 text-slate-300 h-screen w-full">
             <div className="mx-auto max-w-[1000px] p-4">
                 <p className="text-4xl py-4 font-bold border-b-4 border-[#7CD795] mt-20">Projects</p>
                 <p className="py-4 ">
