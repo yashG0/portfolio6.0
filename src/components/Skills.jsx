@@ -15,7 +15,7 @@ const Skills = () => {
 
   return (
     <>
-      <div name="skills" className='w-full  h-screen bg-slate-700 text-gray-300'>
+      <div name="skills" className='bg-slate-700 text-gray-300'>
 
         {/* CONTAINER */}
         <div className='mx-auto max-w-[1000px] p-4 flex flex-col justify-center w-full h-screen '>
@@ -25,7 +25,7 @@ const Skills = () => {
           </div>
 
 
-          <div className="w-full grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
+          <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
 
 
             <div className='shadow-md shadow-[#040c16] md:hover:scale-110 duration-300'>

@@ -4,7 +4,7 @@ import { HiArrowNarrowRight } from 'react-icons/hi';
 const Hero = () => {
   return (
     <>
-      <div name='hero' className=" w-full h-screen">
+      <div name='hero' className="w-full h-screen bg-slate-800 text-slate-200">
 
         {/* CONTAINER */}
         <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full font-f1">

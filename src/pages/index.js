@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
 
       <Navbar />
-      <div className='bg-gray-700 text-gray-300 h-fit'>
+      <div className=''>
         <Hero />
         <About />
         <Skills />
