@@ -36,6 +36,11 @@ const Navbar = () => {
                             Skills
                         </Link>
                     </li>
+                    <li className='hover:text-[#7EE39D] text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
+                        <Link to="project" smooth={true} duration={400}>
+                            Projects
+                        </Link>
+                    </li>
 
                     <li className='hover:text-[#7EE39D] text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
                         <Link to="contact" smooth={true} duration={400}>
@@ -47,7 +52,7 @@ const Navbar = () => {
 
                 {/* HAMBURGER */}
                 <div className="md:hidden z-30 cursor-pointer" onClick={handleClick}>
-                    {!nav ? <FaBars size={20} /> : <FaTimes size={20} />}
+                    {!nav ? <FaBars size={25} /> : <FaTimes size={25} />}
                 </div>
 
                 {/* MOBILE MENU */}
@@ -69,6 +74,11 @@ const Navbar = () => {
                         </Link>
                     </li>
                     {/* <li className='py-6 text-4xl hover:text-[#7EE39D] duration-100'>Work</li> */}
+                    <li className='py-6 text-4xl hover:text-[#7EE39D] duration-100'>
+                        <Link onClick={handleClick} to="project" smooth={true} duration={400}>
+                            Projects
+                        </Link>
+                    </li>
                     <li className='py-6 text-4xl hover:text-[#7EE39D] duration-100'>
                         <Link onClick={handleClick} to="contact" smooth={true} duration={400}>
                             Contact

@@ -2,6 +2,7 @@ import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
+import Project from '@/components/Project'
 import Skills from '@/components/Skills'
 import Head from 'next/head'
 
@@ -11,6 +12,7 @@ import Head from 'next/head'
 
 
 export default function Home() {
+  
   return (
     <>
       <Head>
@@ -22,7 +24,9 @@ export default function Home() {
         <Hero />
         <About />
         <Skills />
+        <Project />
         <Contact />
+        
       </div>
     </>
   )
