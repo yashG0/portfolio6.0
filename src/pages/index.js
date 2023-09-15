@@ -5,28 +5,30 @@ import Navbar from '@/components/Navbar'
 import Project from '@/components/Project'
 import Skills from '@/components/Skills'
 import Head from 'next/head'
+import { useState } from 'react'
 
-// import Work from '@/components/Work'
-// import Image from 'next/image'
+
 
 
 
 export default function Home() {
-  
+  const [dark, setDark] = useState(true);
+
+
   return (
     <>
       <Head>
         <title>My Portfolio</title>
       </Head>
 
-      <Navbar />
+      <Navbar dark={dark} setDark={setDark}/>
       <div className=''>
-        <Hero />
-        <About />
-        <Skills />
-        <Project />
-        <Contact />
-        
+        <Hero dark={dark}/>
+        <About dark={dark}/>
+        <Skills dark={dark}/>
+        <Project dark={dark}/>
+        <Contact dark={dark}/>
+
       </div>
     </>
   )

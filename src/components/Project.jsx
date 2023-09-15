@@ -5,7 +5,7 @@ import weather from '../assets/weather.jpg';
 import currency from '../assets/currency.jpg';
 import login from '../assets/login.jpg';
 
-const Project = () => {
+const Project = ({ dark }) => {
     const projects = [
         {
             id: 0,
@@ -33,7 +33,7 @@ const Project = () => {
             name: 'Login Page',
             link: 'https://fascinating-crumble-aca16b.netlify.app/',
             size: 603,
-            link_img:login
+            link_img: login
         },
     ];
 
@@ -42,29 +42,30 @@ const Project = () => {
     };
 
     return (
-        <div name="project" className="bg-slate-700 text-slate-300 h-screen w-full">
+        <div name="project" className={`${dark ? 'bg-gray-700 text-gray-200' : 'bg-gray-200 text-gray-700'} h-screen w-full`}>
             <div className="mx-auto max-w-[1000px] p-4">
-                <p className="text-4xl py-4 font-bold border-b-4 border-[#7CD795] mt-20">Projects</p>
+                <p className="text-4xl py-4 font-bold border-b-4 border-blue-500 mt-20">Projects</p>
                 <p className="py-4 ">
                     {/* These are the applications I've worked on. Below, you'll find detailed descriptions of each project: */}
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
                     {projects.map(({ id, name, link, link_img }) => (
                         <div
-                            className="shadow-md shadow-[#040c16] md:hover:scale-110 duration-300"
+                            className="shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300"
                             key={id}
                             id={id}
                         >
-                            <div className="w-full bg-gray-200 p-2" onClick={() => handleOpenLink(link)}>
+                            <div className="w-full p-2" onClick={() => handleOpenLink(link)}>
                                 <Image
                                     src={link_img}
                                     width={250}
                                     height={250}
                                     style={{ cursor: 'pointer' }}
                                     loading='lazy'
+                                    className=''
                                 />
                             </div>
-                            <div className="text-xl py-4">{name}</div>
+                            <div className="text-xl py-4 text-gray-200">{name}</div>
                         </div>
                     ))}
                 </div>

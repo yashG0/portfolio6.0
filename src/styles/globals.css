@@ -5,18 +5,41 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base{
-    body{
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+    width: 6.5px;
+    /* Width of the scrollbar */
+}
+
+/* Customize the scrollbar thumb (draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color: #0078d4;
+    /* Color of the thumb */
+    border-radius: 100px;
+    /* Rounded corners of the thumb */
+}
+
+/* Customize the scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background: rgb(55, 65, 81);
+    /* Color of the track */
+}
+
+
+
+@layer base {
+    body {
         @apply font-[Montserrat];
     }
-    li{
+
+    li {
         @apply px-4;
         @apply cursor-pointer;
     }
-   
+
 }
 
-.content-div{
+.content-div {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -24,6 +47,6 @@
 
 }
 
-.content-div:hover{
-    background-image: linear-gradient(to right,rgba(112,157,255,.8),hsla(242,74%,615,0.8));
+.content-div:hover {
+    background-image: linear-gradient(to right, rgba(112, 157, 255, .8), hsla(242, 74%, 615, 0.8));
 }
