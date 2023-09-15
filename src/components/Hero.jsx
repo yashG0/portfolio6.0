@@ -24,8 +24,6 @@ const Hero = ({ dark }) => {
                 strings: ["Web Developer", 'Programmer', 'Freelancer', 'Designer'],
                 autoStart: true,
                 loop: true,
-                deleteSpeed:150,
-                delay:150
               }}
             />
 
