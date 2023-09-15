@@ -109,20 +109,18 @@ const Navbar = ({ dark, setDark }) => {
                 {/* SOCIAL ICONS */}
                 <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
                     <ul>
-                        <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0c83e9]' >
-                            <Link onClick={() => window.open('https://www.facebook.com/', '_blank')} className='flex justify-between items-center w-full text-gray-300' > Facebook <FaFacebook size={30} /> </Link>
+                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0c83e9] ' >
+                            <Link onClick={() => window.open('https://www.facebook.com/', '_blank')} className=' flex justify-between items-center w-full text-gray-300 ' > Facebook <FaFacebook size={30} /> </Link>
                         </li>
-                        <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333]'>
+                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333]'>
                             <Link onClick={() => window.open('https://www.github.com/', '_blank')} className='flex justify-between items-center w-full text-gray-300'> Github <FaGithub size={30} /> </Link>
                         </li>
-                        <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
+                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
                             <Link onClick={() => window.open('https://www.gmail.com/', '_blank')} className='flex justify-between items-center w-full text-gray-300'> Mail <HiOutlineMail size={30} /> </Link>
                         </li>
-                        <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
+                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
                             <Link onClick={() => window.open('resume.pdf', '_blank')} className='flex justify-between items-center w-full text-gray-300'> Resume <BsFillPersonLinesFill size={30} /> </Link>
                         </li>
-
-
                     </ul>
                 </div>
             </div>

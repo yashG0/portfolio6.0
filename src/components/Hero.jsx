@@ -20,8 +20,6 @@ const Hero = ({ dark }) => {
               ]}
               speed={10}
               cursor=''
-
-
             />
 
           </h1>
