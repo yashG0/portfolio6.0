@@ -16,11 +16,21 @@ const Navbar = ({ dark, setDark }) => {
         setDark(!dark)
     }
 
+    const textShadow = {
+        'text-shadow': '.8px .8px 1px blue'
+    }
+    const textShadowNone = {
+        'text-shadow': 'none'
+    }
+
     return (
         <>
             <div className={`fixed w-full h-[80px] flex justify-between items-center px-4  z-10 ${dark ? 'bg-gray-700 text-gray-200' : 'bg-gray-200 text-gray-700'}`}>
-                <div className="">
-                    <Image src={Logo} alt='logo' width={180} height={180} />
+                <div className={`text-2xl sm:text-4xl font-bold text-blue-500 cursor-pointer`} style={!dark ? textShadow : textShadowNone}>
+                    {/* <Image src={Logo} alt='logo' width={180} height={180} /> */}
+                    <Link to='hero' duration={200} smooth={true}>
+                        My Portfolio
+                    </Link>
                 </div>
 
                 {/* MENU */}
@@ -52,15 +62,15 @@ const Navbar = ({ dark, setDark }) => {
                             Contact
                         </Link>
                     </li>
-                    
+
                 </ul>
 
-                <div className={`right-0 top-20 ${dark?'bg-white text-black':'bg-black text-white'} absolute rounded-l-full active:translate-x-4 bg-black p-2 duration-300 cursor-pointer`} onClick={toggleDarkMode}>{dark ? <CgSun /> : <CgMoon />}</div>
+                <div className={`right-0 top-20 ${dark ? 'bg-white text-black' : 'bg-black text-white'} absolute rounded-l-full active:translate-x-4 bg-black p-2 duration-300 cursor-pointer`} onClick={toggleDarkMode}>{dark ? <CgSun /> : <CgMoon />}</div>
 
 
                 {/* HAMBURGER */}
-                <div className={`${dark?'text-gray-200':'text-gray-700'} md:hidden z-30 cursor-pointer `} onClick={handleClick}>
-                    {!nav? <FaBars size={25} /> : <FaTimes size={25} className={`${dark?'':'text-gray-200'}`} />}
+                <div className={`${dark ? 'text-gray-200' : 'text-gray-700'} md:hidden z-30 cursor-pointer `} onClick={handleClick}>
+                    {!nav ? <FaBars size={25} /> : <FaTimes size={25} className={`${dark ? '' : 'text-gray-200'}`} />}
                 </div>
 
                 {/* MOBILE MENU */}

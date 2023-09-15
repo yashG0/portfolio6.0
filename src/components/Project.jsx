@@ -51,7 +51,7 @@ const Project = ({ dark }) => {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
                     {projects.map(({ id, name, link, link_img }) => (
                         <div
-                            className="shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300"
+                            className={` ${ dark?'bg-zinc-300 text-zinc-700':'text-zinc-300 bg-zinc-700' } shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300`}
                             key={id}
                             id={id}
                         >
@@ -65,7 +65,7 @@ const Project = ({ dark }) => {
                                     className=''
                                 />
                             </div>
-                            <div className="text-xl py-4 text-gray-200">{name}</div>
+                            <div className="text-xl py-4 uppercase">{name}</div>
                         </div>
                     ))}
                 </div>

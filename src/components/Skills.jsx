@@ -70,9 +70,9 @@ const Skills = ({ dark }) => {
           <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
             {
               skills.map(({ id, name, link }) => (
-                <div className='shadow-md cursor-pointer shadow-[#040c16] bg-gray-700 text-gray-200 md:hover:scale-110 duration-300' id={id}>
-                  <Image src={link} height={100} width={100} alt='htmlIcon' className='w-14 mx-auto sm:mt-4 ' />
-                  <p className='my-4 capitalize text-gray-200'> {name} </p>
+                <div className={`shadow-md cursor-pointer shadow-[#040c16] ${dark ? 'bg-zinc-300 text-zinc-700 ' : 'bg-zinc-700 text-zinc-300'}   md:hover:scale-110 duration-300`} id={id}>
+                  <Image src={link} height={100} width={100} loading='lazy' alt='htmlIcon' className='w-14 mx-auto sm:mt-4 mt-2' />
+                  <p className='my-4 capitalize'> {name} </p>
                 </div>
               ))
             }
