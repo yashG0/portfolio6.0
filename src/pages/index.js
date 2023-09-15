@@ -12,7 +12,7 @@ import { useState } from 'react'
 
 
 export default function Home() {
-  const [dark, setDark] = useState(true);
+  const [dark, setDark] = useState(false);
 
 
   return (
