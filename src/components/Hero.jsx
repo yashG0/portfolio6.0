@@ -30,15 +30,17 @@ const Hero = ({ dark }) => {
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
+                1000,
                 'Web Developer',
-                2000, // wait 1s before replacing "Mice" with "Hamsters"
+                1500, // wait 1s before replacing "Mice" with "Hamsters"
                 'Programmer',
-                2000,
+                1500,
                 'Freelancer',
-                2000,
+                1500,
                 'Designer',
-                2000
+                1500
               ]}
+              
               speed={5}
               repeat={Infinity}
             />
