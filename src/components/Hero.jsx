@@ -4,6 +4,7 @@ import { HiArrowNarrowRight } from 'react-icons/hi';
 
 import { TypeAnimation } from 'react-type-animation';
 
+
 const Hero = ({ dark }) => {
   return (
     <>
@@ -38,7 +39,7 @@ const Hero = ({ dark }) => {
                 'Designer',
                 1500
               ]}
-              
+
               speed={5}
               repeat={Infinity}
             />

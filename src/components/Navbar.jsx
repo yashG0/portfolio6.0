@@ -3,6 +3,7 @@ import { FaBars, FaTimes, FaGithub, FaLinkedin, FaFacebook, FaLinkedinIn } from 
 import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import Logo from '../assets/logo5.png';
+
 import { Link } from 'react-scroll';
 import Image from 'next/image';
 
@@ -23,9 +24,69 @@ const Navbar = ({ dark, setDark }) => {
         'text-shadow': 'none'
     }
 
+    const links = [
+
+        {
+            id: 1,
+            name: 'home',
+            to: 'hero',
+        },
+        {
+            id: 2,
+            name: 'about',
+            to: 'about',
+        },
+        {
+            id: 3,
+            name: 'skill',
+            to: 'skills',
+        },
+        {
+            id: 4,
+            name: 'projects',
+            to: 'project',
+        },
+        {
+            id: 5,
+            name: 'contact',
+            to: 'contact',
+        },
+    ]
+
+    const social_icons = [
+        {
+            id: 0,
+            name: 'facebook',
+            icon: <FaFacebook size={30} />,
+            link: 'https://www.facebook.com/profile.php?id=100095157373972',
+            color: 'bg-blue-700',
+        },
+        {
+            id: 1,
+            name: 'github',
+            icon: <FaGithub size={30} />,
+            link: 'https://github.com/yashG0',
+            color: 'bg-gray-800',
+        },
+        {
+            id: 2,
+            name: 'linkedin',
+            icon: <FaLinkedin size={30} />,
+            link: 'https://www.linkedin.com/in/yash-gaurkar-a897b3228/',
+            color: 'bg-blue-500',
+        },
+        {
+            id: 3,
+            name: 'resume',
+            icon: <BsFillPersonLinesFill size={30} />,
+            link: 'resume.pdf',
+            color: 'bg-gray-600',
+        },
+    ]
+
     return (
         <>
-            <div className={`fixed w-full h-[80px] flex justify-between items-center px-4  z-10 ${dark ? 'bg-gray-700 text-gray-200' : 'bg-gray-200 text-gray-700'}`}>
+            <div className={`fixed w-full h-[80px] shadow-sm shadow-gray-300 flex justify-between items-center px-4  z-10 ${dark ? 'bg-gray-700 text-gray-200 shadow-gray-800' : 'shadow-gray-300 bg-gray-200 text-gray-700'}`}>
                 <div className={`text-2xl sm:text-4xl font-bold text-blue-500 cursor-pointer`} style={!dark ? textShadow : textShadowNone}>
                     {/* <Image src={Logo} alt='logo' width={180} height={180} /> */}
                     <Link to='hero' duration={200} smooth={true}>
@@ -36,91 +97,51 @@ const Navbar = ({ dark, setDark }) => {
                 {/* MENU */}
 
                 <ul className='hidden md:flex'>
-                    <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
-                        <Link to="hero" smooth={true} duration={400}>
-                            Home
-                        </Link>
-                    </li>
-                    <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
-                        <Link to="about" smooth={true} duration={400}>
-                            About
-                        </Link>
-                    </li>
-                    <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
-                        <Link to="skills" smooth={true} duration={400}>
-                            Skills
-                        </Link>
-                    </li>
-                    <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
-                        <Link to="project" smooth={true} duration={400}>
-                            Projects
-                        </Link>
-                    </li>
+                    {
+                        links.map(({ id, name, to }) => (
+                            <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105' id={id}>
+                                <Link to={to} smooth={true} duration={400} className='capitalize'>
+                                    {name}
+                                </Link>
+                            </li>
 
-                    <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105 '>
-                        <Link to="contact" smooth={true} duration={400}>
-                            Contact
-                        </Link>
-                    </li>
-
+                        ))
+                    }
                 </ul>
 
-                <div className={`right-0 top-20 ${dark ? 'bg-white text-black' : 'bg-black text-white'} absolute rounded-l-full active:translate-x-4 bg-black p-2 duration-300 cursor-pointer`} onClick={toggleDarkMode}>{dark ? <CgSun /> : <CgMoon />}</div>
+                <div className={`right-0  top-20 ${dark ? 'text-gray-700 bg-gray-200' : 'text-gray-200 bg-gray-700'} absolute rounded-l-full active:translate-x-6 bg-black p-2 duration-300 cursor-pointer`} onClick={toggleDarkMode}>{dark ? <CgSun /> : <CgMoon />}</div>
 
 
                 {/* HAMBURGER */}
-                <div className={`${dark ? 'text-gray-200' : 'text-gray-700'} md:hidden z-30 cursor-pointer `} onClick={handleClick}>
-                    {!nav ? <FaBars size={25} /> : <FaTimes size={25} className={`${dark ? '' : 'text-gray-200'}`} />}
+                <div className={`${dark ? 'text-gray-200' : 'text-gray-700'} md:hidden z-30 cursor-pointer  `} onClick={handleClick}>
+                    {!nav ? <FaBars size={25} /> : <FaTimes size={25} className={`${dark ? '' : ' text-gray-700'}`} />}
                 </div>
 
                 {/* MOBILE MENU */}
 
-                <ul className={!nav ? 'hidden' : 'absolute top-0 left-0 w-full h-screen bg-gray-700 text-gray-200 flex flex-col justify-center items-center z-20'}>
-                    <li className='py-6 text-4xl hover:text-blue-500 duration-100'>
-                        <Link onClick={handleClick} to="hero" smooth={true} duration={400}>
-                            Home
-                        </Link>
-                    </li>
-                    <li className='py-6 text-4xl hover:text-blue-500 duration-100'>
-                        <Link onClick={handleClick} to="about" smooth={true} duration={400}>
-                            About
-                        </Link>
-                    </li>
-                    <li className='py-6 text-4xl hover:text-blue-500 duration-100'>
-                        <Link onClick={handleClick} to="skills" smooth={true} duration={400}>
-                            Skills
-                        </Link>
-                    </li>
-                    {/* <li className='py-6 text-4xl hover:text-blue-500 duration-100'>Work</li> */}
-                    <li className='py-6 text-4xl hover:text-blue-500 duration-100'>
-                        <Link onClick={handleClick} to="project" smooth={true} duration={400}>
-                            Projects
-                        </Link>
-                    </li>
-                    <li className='py-6 text-4xl hover:text-blue-500 duration-100'>
-                        <Link onClick={handleClick} to="contact" smooth={true} duration={400}>
-                            Contact
-                        </Link>
-                    </li>
-
+                <ul className={`${!nav ? 'hidden' : 'absolute top-20 right-10 w-fit  flex flex-col justify-center items-center z-20 rounded-md h-fit'} ${dark?'bg-gray-200 text-gray-700':'bg-gray-700 text-gray-200'}`}>
+                    {
+                        links.map(({ id, name, to }) => (
+                            <li className='my-2 text-xl' id={id}>
+                                <Link onClick={handleClick} to={to} smooth={true} duration={400} className='capitalize'>
+                                    {name}
+                                </Link>
+                            </li>
+                        ))
+                    }
                 </ul>
-
 
                 {/* SOCIAL ICONS */}
                 <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
                     <ul>
-                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#0c83e9] ' >
-                            <Link onClick={() => window.open('https://www.facebook.com/', '_blank')} className=' flex justify-between items-center w-full text-gray-300 ' > Facebook <FaFacebook size={30} /> </Link>
-                        </li>
-                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333]'>
-                            <Link onClick={() => window.open('https://www.github.com/', '_blank')} className='flex justify-between items-center w-full text-gray-300'> Github <FaGithub size={30} /> </Link>
-                        </li>
-                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                            <Link onClick={() => window.open('https://www.gmail.com/', '_blank')} className='flex justify-between items-center w-full text-gray-300'> Mail <HiOutlineMail size={30} /> </Link>
-                        </li>
-                        <li className='rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                            <Link onClick={() => window.open('resume.pdf', '_blank')} className='flex justify-between items-center w-full text-gray-300'> Resume <BsFillPersonLinesFill size={30} /> </Link>
-                        </li>
+                        {
+                            social_icons.map(({ id, name, icon, link, color }) => (
+
+                                <li className={`rounded-r-lg w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${color} `} id={id}>
+                                    <Link onClick={() => window.open(link, '_blank')} className=' capitalize flex justify-between items-center w-full text-gray-300 ' > {name} {icon} </Link>
+                                </li>
+                            ))
+                        }
                     </ul>
                 </div>
             </div>

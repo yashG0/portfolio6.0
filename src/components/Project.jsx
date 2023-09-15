@@ -45,13 +45,13 @@ const Project = ({ dark }) => {
         <div name="project" className={`${dark ? 'bg-gray-700 text-gray-200' : 'bg-gray-200 text-gray-700'} h-screen w-full`}>
             <div className="mx-auto max-w-[1000px] p-4">
                 <p className="text-4xl py-4 font-bold border-b-4 border-blue-500 mt-20">Projects</p>
-                <p className="py-4 ">
-                    {/* These are the applications I've worked on. Below, you'll find detailed descriptions of each project: */}
+                <p className="mt-4">
+                    // These are the applications I've worked on. Below, you'll find detailed descriptions of each project:
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
                     {projects.map(({ id, name, link, link_img }) => (
                         <div
-                            className={` ${ dark?'bg-zinc-300 text-zinc-700':'text-zinc-300 bg-zinc-700' } shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300`}
+                            className={` ${ dark?'bg-zinc-300 text-zinc-700':'text-zinc-300 bg-zinc-700' } shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300 rounded-lg`}
                             key={id}
                             id={id}
                         >
@@ -62,10 +62,10 @@ const Project = ({ dark }) => {
                                     height={250}
                                     style={{ cursor: 'pointer' }}
                                     loading='lazy'
-                                    className=''
+                                    className='rounded-lg'
                                 />
                             </div>
-                            <div className="text-xl py-4 uppercase">{name}</div>
+                            <div className="text-xl py-2 capitalize">{name}</div>
                         </div>
                     ))}
                 </div>
