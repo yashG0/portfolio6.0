@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { HiArrowNarrowRight } from 'react-icons/hi';
-import Typewriter from 'typewriter-effect';
+
+import { TypeAnimation } from 'react-type-animation';
 
 const Hero = ({ dark }) => {
   return (
@@ -12,19 +13,34 @@ const Hero = ({ dark }) => {
         <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full font-f1">
           <p className='text-blue-500'>Hi, My Name is</p>
           <h1 className={`text-4xl sm:text-7xl font-bold ${dark ? 'text-gray-200' : 'text-gray-800'}  font-f1`}>
-            <Typewriter
-              onInit={(typewriter) => {
-                typewriter.typeString('Yash Gaurkar').start();
-              }} />
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                'Yash Gaurkar',
+              ]}
+              speed={10}
+              cursor=''
+
+
+            />
 
           </h1>
           <h2 className={`text-3xl sm:text-7xl font-bold ${dark ? 'text-gray-400' : 'text-gray-600'} font-f1`}>
-            <Typewriter
-              options={{
-                strings: ["Web Developer", 'Programmer', 'Freelancer', 'Designer'],
-                autoStart: true,
-                loop: true,
-              }}
+
+            <TypeAnimation
+              sequence={[
+                // Same substring at the start will only be typed out once, initially
+                'Web Developer',
+                2000, // wait 1s before replacing "Mice" with "Hamsters"
+                'Programmer',
+                2000,
+                'Freelancer',
+                2000,
+                'Designer',
+                2000
+              ]}
+              speed={5}
+              repeat={Infinity}
             />
 
           </h2>
