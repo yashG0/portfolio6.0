@@ -4,6 +4,7 @@ import blog from '../assets/blog.jpg';
 import weather from '../assets/weather.jpg';
 import currency from '../assets/currency.jpg';
 import login from '../assets/dict.jpg';
+import cyber from '../assets/cyber.xcf';
 
 const Project = ({ dark }) => {
     const projects = [
@@ -35,6 +36,13 @@ const Project = ({ dark }) => {
             size: 603,
             link_img: login
         },
+        {
+            id: 4,
+            name: 'Cyberpunk App',
+            link: 'https://courageous-cajeta-68877b.netlify.app/',
+            size: 603,
+            link_img: cyber
+        },
     ];
 
     const handleOpenLink = (link) => {
@@ -51,7 +59,7 @@ const Project = ({ dark }) => {
                 <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 md:gap-9 text-center py-8">
                     {projects.map(({ id, name, link, link_img }) => (
                         <div
-                            className={` ${ dark?'bg-zinc-300 text-zinc-700':'text-zinc-300 bg-zinc-700' } shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300 rounded-lg`}
+                            className={` ${dark ? 'bg-zinc-300 text-zinc-700' : 'text-zinc-300 bg-zinc-700'} shadow-md shadow-[#040c16] bg-gray-700 hover:scale-105 duration-300 rounded-lg`}
                             key={id}
                             id={id}
                         >
