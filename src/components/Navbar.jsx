@@ -10,7 +10,11 @@ import Image from 'next/image';
 import { CgMoon, CgSun } from 'react-icons/cg';
 
 const Navbar = ({ dark, setDark }) => {
+
     const [nav, setNav] = useState(false);
+
+
+
     const handleClick = () => setNav(!nav);
 
     const toggleDarkMode = () => {
@@ -113,23 +117,13 @@ const Navbar = ({ dark, setDark }) => {
 
 
                 {/* HAMBURGER */}
-                <div className={`${dark ? 'text-gray-200' : 'text-gray-700'} md:hidden z-30 cursor-pointer  `} onClick={handleClick}>
-                    {!nav ? <FaBars size={25} /> : <FaTimes size={25} className={`${dark ? '' : ' text-gray-700'}`} />}
+                <div className={`${dark ? 'text-gray-200' : 'text-gray-700'} md:hidden z-30 cursor-pointer `} onClick={handleClick}>
+                    <div className={`w-6 h-[2.5px] my-1 ${dark ? 'text-slate-800 bg-slate-200' : 'bg-slate-800 text-slate-200'}  transition-all duration-300 ${nav ? 'rotate-45 translate-y-1.5' : ''}`}></div>
+                    <div className={`w-6 h-[2.5px] my-1 ${dark ? 'text-slate-800 bg-slate-200' : 'bg-slate-800 text-slate-200'}  transition-all duration-300 ${nav ? 'opacity-0' : ''}`}></div>
+                    <div className={`w-6 h-[2.5px] my-1 ${dark ? 'text-slate-800 bg-slate-200' : 'bg-slate-800 text-slate-200'}  transition-all duration-300 ${nav ? '-rotate-45 -translate-y-2' : ''}`}></div>
                 </div>
 
-                {/* MOBILE MENU */}
 
-                <ul className={`${!nav ? 'hidden' : 'absolute top-20 right-10 w-fit  flex flex-col justify-center items-center z-20 rounded-md h-fit'} ${dark?'bg-gray-200 text-gray-700':'bg-gray-700 text-gray-200'}`}>
-                    {
-                        links.map(({ id, name, to }) => (
-                            <li className='my-2 text-xl' id={id}>
-                                <Link onClick={handleClick} to={to} smooth={true} duration={500} className='capitalize'>
-                                    {name}
-                                </Link>
-                            </li>
-                        ))
-                    }
-                </ul>
 
                 {/* SOCIAL ICONS */}
                 <div className="hidden lg:flex fixed flex-col top-[35%] left-0">
@@ -145,6 +139,19 @@ const Navbar = ({ dark, setDark }) => {
                     </ul>
                 </div>
             </div>
+            {/* MOBILE MENU */}
+
+            <ul className={`md:hidden ease-in-out fixed rounded-md duration-200 flex w-fit flex-col justify-center items-center h-fit ${nav ? 'top-20 right-10' : '-top-36 right-10 '} ${dark ? 'bg-gray-200 text-gray-700' : 'bg-gray-700 text-gray-200'}`}>
+                {
+                    links.map(({ id, name, to }) => (
+                        <li className='my-2 text-xl' id={id}>
+                            <Link onClick={handleClick} to={to} smooth={true} duration={500} className='capitalize'>
+                                {name}
+                            </Link>
+                        </li>
+                    ))
+                }
+            </ul>
         </>
     );
 };

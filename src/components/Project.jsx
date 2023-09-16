@@ -3,7 +3,7 @@ import React from 'react';
 import blog from '../assets/blog.jpg';
 import weather from '../assets/weather.jpg';
 import currency from '../assets/currency.jpg';
-import login from '../assets/login.jpg';
+import login from '../assets/dict.jpg';
 
 const Project = ({ dark }) => {
     const projects = [
@@ -30,8 +30,8 @@ const Project = ({ dark }) => {
         },
         {
             id: 3,
-            name: 'Login Page',
-            link: 'https://fascinating-crumble-aca16b.netlify.app/',
+            name: 'Dictonary App',
+            link: 'https://main--leafy-sable-35c9bc.netlify.app/',
             size: 603,
             link_img: login
         },
@@ -63,6 +63,7 @@ const Project = ({ dark }) => {
                                     style={{ cursor: 'pointer' }}
                                     loading='lazy'
                                     className='rounded-lg'
+                                    placeholder='blur'
                                 />
                             </div>
                             <div className="text-xl py-2 capitalize">{name}</div>
