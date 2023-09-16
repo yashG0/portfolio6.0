@@ -89,7 +89,7 @@ const Navbar = ({ dark, setDark }) => {
             <div className={`fixed w-full h-[80px] shadow-sm shadow-gray-300 flex justify-between items-center px-4  z-10 ${dark ? 'bg-gray-700 text-gray-200 shadow-gray-800' : 'shadow-gray-300 bg-gray-200 text-gray-700'}`}>
                 <div className={`text-2xl sm:text-4xl font-bold text-blue-500 cursor-pointer`} style={!dark ? textShadow : textShadowNone}>
                     {/* <Image src={Logo} alt='logo' width={180} height={180} /> */}
-                    <Link to='hero' duration={200} smooth={true}>
+                    <Link to='hero' duration={400} smooth={true}>
                         My Portfolio
                     </Link>
                 </div>
@@ -123,7 +123,7 @@ const Navbar = ({ dark, setDark }) => {
                     {
                         links.map(({ id, name, to }) => (
                             <li className='my-2 text-xl' id={id}>
-                                <Link onClick={handleClick} to={to} smooth={true} duration={400} className='capitalize'>
+                                <Link onClick={handleClick} to={to} smooth={true} duration={500} className='capitalize'>
                                     {name}
                                 </Link>
                             </li>
