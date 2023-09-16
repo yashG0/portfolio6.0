@@ -4,7 +4,7 @@ import blog from '../assets/blog.jpg';
 import weather from '../assets/weather.jpg';
 import currency from '../assets/currency.jpg';
 import login from '../assets/dict.jpg';
-import cyber from '../assets/cyber.xcf';
+import cyber from '../assets/cyber.png';
 
 const Project = ({ dark }) => {
     const projects = [
