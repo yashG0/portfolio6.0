@@ -36,7 +36,7 @@ const Hero = ({ dark }) => {
                 1500,
                 'Freelancer',
                 1500,
-                'Designer',
+                'UI-UX Designer',
                 1500
               ]}
 

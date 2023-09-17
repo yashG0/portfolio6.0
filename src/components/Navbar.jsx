@@ -47,6 +47,11 @@ const Navbar = ({ dark, setDark }) => {
             to: 'project',
         },
         {
+            id: 4,
+            name: 'social',
+            to: 'social',
+        },
+        {
             id: 5,
             name: 'contact',
             to: 'contact',
@@ -87,9 +92,9 @@ const Navbar = ({ dark, setDark }) => {
     return (
         <>
             <div className={`fixed w-full h-[80px] shadow-sm shadow-gray-300 flex justify-between items-center px-4  z-10 ${dark ? 'bg-gray-700 text-gray-200 shadow-gray-800' : 'shadow-gray-300 bg-gray-200 text-gray-700'}`}>
-                <div className={`text-2xl sm:text-4xl font-bold text-blue-500 cursor-pointer`} style={!dark ? textShadow : textShadowNone}>
+                <div className={` text-2xl sm:text-4xl font-bold  cursor-pointer`}>
                     {/* <Image src={Logo} alt='logo' width={180} height={180} /> */}
-                    <Link to='hero' duration={400} smooth={true}>
+                    <Link to='hero' duration={400} smooth={true} className={`bg-gradient-to-tr  text-transparent bg-clip-text ${dark ? 'from-gray-500 to-blue-500' : 'from-gray-700 to-blue-800'}`}>
                         My Portfolio
                     </Link>
                 </div>
@@ -109,7 +114,7 @@ const Navbar = ({ dark, setDark }) => {
                     }
                 </ul>
 
-                <div className={`right-0  top-20 ${dark ? 'text-gray-700 bg-gray-200' : 'text-gray-200 bg-gray-700'} absolute rounded-l-full active:translate-x-6 bg-black p-2 duration-300 cursor-pointer`} onClick={toggleDarkMode}>{dark ? <CgSun /> : <CgMoon />}</div>
+                <div className={`right-0 top-24 ${dark ? 'text-gray-700 bg-gray-200' : 'text-gray-200 bg-gray-700'} absolute rounded-l-full  bg-black p-[6px] md:p-2  cursor-pointer`} onClick={toggleDarkMode}>{dark ? <CgSun /> : <CgMoon />}</div>
 
 
                 {/* HAMBURGER */}
@@ -135,9 +140,10 @@ const Navbar = ({ dark, setDark }) => {
                     </ul>
                 </div>
             </div>
+            
             {/* MOBILE MENU */}
 
-            <ul className={`md:hidden ease-in-out fixed rounded-md duration-200 flex w-fit flex-col justify-center items-center h-fit ${nav ? 'top-20 right-10' : '-top-36 right-10 '} ${dark ? 'bg-gray-200 text-gray-700' : 'bg-gray-700 text-gray-200'}`}>
+            <ul className={`md:hidden ease-in-out fixed rounded-md duration-200 flex w-fit flex-col justify-center items-center h-fit ${nav ? 'top-20 right-10' : '-top-48 right-10 '} ${dark ? 'bg-gray-200 text-gray-700' : 'bg-gray-700 text-gray-200'}`}>
                 {
                     links.map(({ id, name, to }) => (
                         <li className='my-2 text-xl' id={id}>

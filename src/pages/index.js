@@ -4,6 +4,7 @@ import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import Project from '@/components/Project'
 import Skills from '@/components/Skills'
+import Social from '@/components/Social'
 import Head from 'next/head'
 import { useState } from 'react'
 
@@ -21,13 +22,14 @@ export default function Home() {
         <title>Yash's Portfolio</title>
       </Head>
 
-      <Navbar dark={dark} setDark={setDark}/>
+      <Navbar dark={dark} setDark={setDark} />
       <div className=''>
-        <Hero dark={dark}/>
-        <About dark={dark}/>
-        <Skills dark={dark}/>
-        <Project dark={dark}/>
-        <Contact dark={dark}/>
+        <Hero dark={dark} />
+        <About dark={dark} />
+        <Skills dark={dark} />
+        <Project dark={dark} />
+        <Social dark={dark} />
+        <Contact dark={dark} />
 
       </div>
     </>
