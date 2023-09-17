@@ -18,7 +18,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>My Portfolio</title>
+        <title>Yash's Portfolio</title>
       </Head>
 
       <Navbar dark={dark} setDark={setDark}/>
