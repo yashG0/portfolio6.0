@@ -5,11 +5,7 @@ import { Link } from 'react-scroll';
 import { CgMoon, CgSun } from 'react-icons/cg';
 
 
-const Navbar = ({ dark, setDark }) => {
-
-    const [nav, setNav] = useState(false);
-
-
+const Navbar = ({ dark, setDark, nav, setNav }) => {
 
     const handleClick = () => setNav(!nav);
 
@@ -17,12 +13,7 @@ const Navbar = ({ dark, setDark }) => {
         setDark(!dark)
     }
 
-    const textShadow = {
-        'text-shadow': '.8px .8px 1px blue'
-    }
-    const textShadowNone = {
-        'text-shadow': 'none'
-    }
+
 
     const links = [
 
