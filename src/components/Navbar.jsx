@@ -13,27 +13,25 @@ const Navbar = ({ dark, setDark, nav, setNav }) => {
         setDark(!dark)
     }
 
-
-
     const links = [
 
         {
-            id: 1,
+            id: 0,
             name: 'home',
             to: 'hero',
         },
         {
-            id: 2,
+            id: 1,
             name: 'about',
             to: 'about',
         },
         {
-            id: 3,
+            id: 2,
             name: 'skill',
             to: 'skills',
         },
         {
-            id: 4,
+            id: 3,
             name: 'projects',
             to: 'project',
         },
@@ -97,11 +95,11 @@ const Navbar = ({ dark, setDark, nav, setNav }) => {
                 <ul className='hidden md:flex'>
                     {
                         links.map(({ id, name, to }) => (
-                            <li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105' id={id}>
+                            id === 4 ? '' : (<li className='hover:text-blue-500 text-xl hover:translate-y-1 hover:duration-100 duration-150 hover:scale-105' id={id}>
                                 <Link to={to} smooth={true} duration={400} className='capitalize'>
                                     {name}
                                 </Link>
-                            </li>
+                            </li>)
 
                         ))
                     }
@@ -147,7 +145,7 @@ const Navbar = ({ dark, setDark, nav, setNav }) => {
                     ))
                 }
             </ul> */}
-            <ul className={`md:hidden z-10 fixed h-[67px] w-full  ${nav ? 'top-20 duration-200' : 'hidden'} ${dark ? 'text-gray-200 bg-gray-600' : 'bg-gray-300 text-gray-700'}`}>
+            <ul className={`md:hidden z-10 fixed h-[67px] w-full  ${nav ? 'top-20 duration-200' : 'hidden'} ${dark ? 'text-gray-200 bg-gray-600/60 backdrop-blur-md' : 'bg-gray-700/60 backdrop-blur-md text-gray-300'}`}>
                 <div className='grid text-center grid-cols-3 h-full justify-center items-center'>
                     {
                         links.map(({ id, name, to }) => (
