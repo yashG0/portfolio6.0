@@ -23,14 +23,13 @@ export default function Home() {
       </Head>
 
       <Navbar dark={dark} setDark={setDark} nav={nav} setNav={setNav} />
-      <div className='' onClick={()=>setNav(false)}>
-        <Hero dark={dark}/>
+      <div className='' onClick={() => setNav(false)}>
+        <Hero dark={dark} />
         <About dark={dark} />
         <Skills dark={dark} />
         <Project dark={dark} />
         <Social dark={dark} />
         <Contact dark={dark} />
-
       </div>
     </>
   )
