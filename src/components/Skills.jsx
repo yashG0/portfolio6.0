@@ -10,6 +10,7 @@ import GitHub from '../assets/github.png';
 import Tailwind from '../assets/tailwind.png';
 import Mongo from '../assets/mongo.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Skills = ({ dark }) => {
 
@@ -17,42 +18,50 @@ const Skills = ({ dark }) => {
     {
       id: 0,
       name: 'html',
-      link: HTML
+      img_name: HTML,
+      link: 'https://html.com/'
     },
     {
       id: 1,
       name: 'css',
-      link: CSS
+      img_name: CSS,
+      link: 'https://developer.mozilla.org/en-US/docs/Web/CSS'
     },
     {
       id: 2,
       name: 'javascript',
-      link: JavaScript
+      img_name: JavaScript,
+      link: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
     },
     {
       id: 3,
       name: 'react',
-      link: ReactImg
+      img_name: ReactImg,
+      link: 'https://react.dev/blog/2023/03/16/introducing-react-dev'
     },
     {
       id: 4,
       name: 'node',
-      link: Node
+      img_name: Node,
+      link: 'https://nodejs.org/en/docs'
     },
     {
       id: 5,
       name: 'github',
-      link: GitHub
+      img_name: GitHub,
+      link: 'https://github.com/yashG0'
     },
     {
       id: 6,
       name: 'tailwindcss',
-      link: Tailwind
+      img_name: Tailwind,
+      link: 'https://tailwindcss.com/docs'
     },
     {
       id: 7,
       name: 'mongodb',
-      link: Mongo
+      img_name: Mongo,
+      link: 'https://www.mongodb.com/docs/'
     },
   ]
 
@@ -69,10 +78,12 @@ const Skills = ({ dark }) => {
 
           <div className="w-full grid grid-cols-3 sm:grid-cols-4 gap-4 md:gap-6 text-center py-8">
             {
-              skills.map(({ id, name, link }) => (
+              skills.map(({ id, name, img_name, link }) => (
                 <div className={`rounded-lg shadow-md cursor-pointer shadow-[#040c16] ${dark ? 'bg-zinc-300 text-zinc-700 ' : 'bg-zinc-700 text-zinc-300'}   md:hover:scale-105 duration-300`} id={id}>
-                  <Image src={link} height={100} width={100} loading='lazy' alt='htmlIcon' className='w-14 mx-auto sm:mt-4 mt-2' />
-                  <p className='my-4 capitalize'> {name} </p>
+                  <Link href={link}>
+                    <Image src={img_name} height={100} width={100} loading='lazy' alt='htmlIcon' className='w-14 mx-auto sm:mt-4 mt-2' />
+                    <p className='my-4 capitalize'> {name} </p>
+                  </Link>
                 </div>
               ))
             }

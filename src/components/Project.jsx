@@ -5,6 +5,7 @@ import weather from '../assets/weather.jpg';
 import currency from '../assets/currency.jpg';
 import login from '../assets/dict.jpg';
 import cyber from '../assets/cyber.png';
+import music from '../assets/music.jpg';
 
 const Project = ({ dark }) => {
     const projects = [
@@ -42,6 +43,13 @@ const Project = ({ dark }) => {
             link: 'https://courageous-cajeta-68877b.netlify.app/',
             size: 604,
             link_img: cyber
+        },
+        {
+            id: 5,
+            name: 'Music App',
+            link: 'https://gilded-florentine-b76815.netlify.app/',
+            size: 605,
+            link_img: music
         },
     ];
 
