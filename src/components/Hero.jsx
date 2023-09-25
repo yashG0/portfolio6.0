@@ -8,7 +8,7 @@ import { TypeAnimation } from 'react-type-animation';
 const Hero = ({ dark }) => {
   return (
     <>
-      <div name='hero' className={`w-full h-screen ${dark ? 'bg-gray-700 text-gray-200' : 'text-gray-700 bg-gray-200'}`}>
+      <div name='hero' className={`w-full h-screen ${dark ? 'bg-gray-700 text-gray-200' : 'text-gray-700 bg-gray-200'}`} >
 
         {/* CONTAINER */}
         <div className="max-w-[1000px] mx-auto px-8 flex flex-col justify-center h-full font-f1">
